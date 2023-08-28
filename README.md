@@ -8,13 +8,13 @@ Data Description:
 
 The project utilizes three datasets:
 
-1.Book Data:
+  1.Book Data:
     Contains information about books, including ISBN (International Standard Book Number), Book Title, Book Author, Year of Publication, Publisher, and URLs to book cover images in small, medium, and large sizes.
 
-2.Users Data:
+  2.Users Data:
     Includes details about users, such as User ID, Location, and Age. However, this dataset may not be relevant for building the recommendation system and may not be used in the model.
 
-3.Ratings Data:
+  3.Ratings Data:
     Contains user interactions and ratings for books. It includes User ID, ISBN, and Book Rating.
 
 User interactions are of paramount importance for the recommendation system. To construct an effective collaborative filtering model for the recommender system, data preprocessing and preparation are crucial. It's worth noting that the Users dataset may not be utilized in this project as it may not significantly contribute to the recommendation system's functionality. Instead, the focus will be on leveraging the Book Data and Ratings Data to create a robust book recommendation model based on user preferences and book ratings.
@@ -25,16 +25,16 @@ User interactions are of paramount importance for the recommendation system. To 
 
 Types of Recommendation Systems:
 
-1.Popularity-Based:
+  1.Popularity-Based:
     This recommendation system suggests the most popular books to users based on overall ratings and popularity on the platform. It doesn't take into account individual user preferences but rather recommends what is generally well-liked.
 
-2.Collaborative Filtering:
+  2.Collaborative Filtering:
     Collaborative filtering relies on analyzing user behavior and interactions. It predicts a user's preferences by finding similarities between that user and others in the system. This method can be user-based (finding similar users) or item-based (finding similar items).
 
-3.Content-Based Filtering:
+  3.Content-Based Filtering:
     Content-based filtering recommends items based on their descriptions and matches them to a user's profile of preferred choices. It relies on keywords and descriptions to understand user interests and make recommendations.
 
-4.Hybrid Recommendation Systems:
+  4.Hybrid Recommendation Systems:
     Hybrid recommendation systems combine multiple approaches, such as content-based and collaborative filtering, to provide more accurate and diverse recommendations. These systems aim to leverage the strengths of different methods for improved accuracy.
 
 Summary of the Project:
@@ -42,14 +42,14 @@ Summary of the Project:
 This project focuses on building a book recommendation system, a type of recommender system that suggests similar books to readers based on their interests. The project makes use of three datasets: a Book dataset that includes information such as ISBN, Book Title, and Author, a Users dataset that contains User ID, Location, and Age data, and a Rating dataset that stores User ID, ISBN, and Book Rating information.
 The project follows these key steps:
 
-  a.Data Preparation and Exploratory Data Analysis (EDA): The data is cleaned and features are engineered to prepare it for analysis. EDA is conducted to gain insights into the data.
+   a.Data Preparation and Exploratory Data Analysis (EDA): The data is cleaned and features are engineered to prepare it for analysis. EDA is conducted to gain insights into the data.
 
-  b.Popularity-Based Recommendation: An initial recommendation system is built based on book popularity, specifically book ratings. This recommendation is provided to all users regardless of their personal characteristics.
+   b.Popularity-Based Recommendation: An initial recommendation system is built based on book popularity, specifically book ratings. This recommendation is provided to all users regardless of their personal characteristics.
   The top 50 books with the highest average ratings are selected, but only those with more than 250 ratings are considered.
 
-  c.Collaborative Filtering: Collaborative filtering is implemented using a memory-based approach on the training and test datasets. Users who have rated more than 200 books and books rated by more than 50 users are selected to ensure accuracy and avoid outliers. Cosine similarity is applied to compute item similarity, and recommendations are made based on scores.
+   c.Collaborative Filtering: Collaborative filtering is implemented using a memory-based approach on the training and test datasets. Users who have rated more than 200 books and books rated by more than 50 users are selected to ensure accuracy and avoid outliers. Cosine similarity is applied to compute item similarity, and recommendations are made based on scores.
 
-  d.Recommendation Function: A function is created to recommend four similar books with the same author when given a book name as input.
+   d.Recommendation Function: A function is created to recommend four similar books with the same author when given a book name as input.
 
 Conclusion:
 
